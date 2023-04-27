@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
 <head>
   <meta charset="utf-8">
-  <title>Data story with flourish</title>
+  <title>Social Robot One-stop Platform</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="how-to-make-a-story">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,12 +18,23 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: #1d1d1d;
+    
     }
 
     .wrapper {
-      padding: 96px 0;
+      padding: 35vh 0;
     }
 
+       .wrapper-small {
+      padding: 20vh 0;
+    }
+
+      
+             .wrapper-top {
+      padding-top: 20vh;
+    }
+
+      
     .font-secondary {
       font-family: 'Lora', serif !important;
     }
@@ -37,6 +48,18 @@
         line-height: 48px;
       }
     }
+      
+       .text-center-h1 {
+      font-size: 36px;
+      line-height: 52px;
+            text-align: center;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+
 
     .text-h2 {
       font-size: 32px;
@@ -48,11 +71,24 @@
         line-height: 32px;
       }
     }
+      
+       .text-center-h2 {
+      font-size: 32px;
+      line-height: 36px;
+      font-weight: 500;
+           text-align: center;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
 
     .text-body-1 {
       font-size: 20px;
       font-weight: 400;
       line-height: 32px;
+        text-align: center;
 
       @media (min-width: @screen-sm-min) {
         font-size: 18px;
@@ -99,7 +135,74 @@
       text-decoration: none;
       word-break: break-word;
     }
+      .content {
+  display: none;
+}
+      
+      .progress-container {
+  background-color: rgba(150, 150, 150, 0.2);
+  height: 10px;
+  width: 100%;
+}
 
+.progress-bar {
+  background-color: #f89c74;
+  height: 10px;
+  width: 0%;
+}
+      
+      .scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+      .background-media {
+          position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+      
+      .background-mask {
+          position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           background-color: rgba(0, 0, 0, 0.6);
+          z-index: 10;
+        }
+#typed-strings {
+	display: none;
+	}
+.typed-cursor{
+    opacity: 1; -webkit-animation: blink 0.7s infinite; animation: blink 0.7s infinite;
+	}
+@-webkit-keyframes blink{ 
+    0% { opacity:1; } 
+    50% { opacity:0; }
+    100% { opacity:1; }
+	}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+	}
+      
     /* Small devices (tablets, 768px and up) */
     /* @media (min-width: @screen-sm-min) { ... } */
 
@@ -108,157 +211,305 @@
 
     /* Large devices (large desktops, 1200px and up) */
     /* @media (min-width: @screen-lg-min) { ... } */
-
-    #scrolly__section {
-      position: relative;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      /* background-color: #f3f3f3; */
-      padding: 1rem;
-    }
-
-    #scrolly__section > * {
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-    }
-
-    .scrolly__content {
-      position: relative;
-      padding: 0 1rem;
-      width: 100%;
-    }
-
-    .scrolly__chart {
-      position: -webkit-sticky;
-      position: sticky;
-      width: 100%;
-      margin: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      z-index: 0;
-    }
-
-    .scrolly__chart iframe {
-      width: 100%;
-      height: 100%;
-    }
-
-    .step {
-      margin: 0 auto 2rem auto;
-      border: 2px solid #104E8B;
-      display: flex;
-      justify-content: center;
-      align-items: start;      
-    }
-
-    .step:last-child {
-      margin-bottom: 0;
-    }
-
-    .text-block.is-active {
-      background-color: goldenrod;
-      color: #3b3b3b;
-    }
-
-    .text-block {
-      background-color: salmon;
-    }
-
-    .step p {
-      text-align: center;
-      padding: 1rem;
-    }
-
-    iframe {
-      border: unset;
-    }
-    
   </style>
 </head>
 
   <body>
-    <div class="wrapper">
+      
+<div class="wrapper">
+
       <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-lg-7 col-11">
-            <p class="text-body-2 mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolorem iusto, vel, cum est architecto odit quia culpa sed ex ipsa praesentium alias ullam tempore numquam aliquid aspernatur, provident nesciunt!
-            </p>
-
-            <img src="https://picsum.photos/640/280" alt="placeholder" width=100% class="mb-5 py-2" />          
-
-            <h3 class="text-h2 font-secondary mb-3">subtitle here</h3>  
-
-            <div class="flourish-embed flourish-chart mt-3" data-src="visualisation/6262784">
-            </div>
-            <p class="text-caption mb-5 text-center">caption: here is a flourish chart and I basically plonked this in here exactly like how I get from the embed instructions</p>            
-
+          <div class="col-lg-9 col-11">
+               <h3 class="text-center-h1 font-secondary mb-3">imagine a world where social robots are our</h3> 
+          
+            
+          <h3 class="text-center-h1 font-secondary mb-3">
+                <span id="typed"></span>
+            <div id="typed-strings">
+                <p><span style="color:coral">companions,</span></p>
+                    <p><span style="color:firebrick">educators,</span></p>
+                    <p><span style="color:deeppink">source of entertainment,</span></p>
+                    <p><span style="color:darkseagreen">therapists,</span></p>
+                    <p><span style="color:cornflowerblue">and helpful personal assistants!</span></p>
+              </div><br>
+            </h3>
+          </div>
+          </div></div></div>
+      
+      
+      
+      
+          <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11">
             <p class="text-body-1 mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aut, cum reprehenderit obcaecati minima eius aperiam dolorem laboriosam ullam facere eaque earum voluptatibus, doloremque officiis quibusdam quae impedit ipsa sunt.
+               At this point, some of you might be thinking <span style="color:coral; font-weight:500">"WOWWW THAT'S PRETTY COOOLLL"</span>, some might say <em><span style="color:coral; font-weight:500">"maybe that's not such a good idea..."</span></em> and others might even have a deep-seated aversion towards these creatures that seek to anthropomorphize. However, this quote might put some things into perspective:
+            </p> 
+               <hr class="line-divider my-5 py-lg-2" />
+           <h3 class="text-center-h1 font-secondary mb-3">
+              “We need to rethink the role of the robot not as a competitor to humans but as a partner, as something that can extend our capabilities.”<br>- Justine Cassell</h3>
+            <hr class="line-divider my-5 py-lg-2" /> 
+                 </div>
+           </div></div>
+      
+      
+      
+      <div class="wrapper-small">
+       <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11">
+              <h3 class="text-center-h1 font-secondary mb-3">what are social robots?</h3> 
+            <p class="text-body-1 mb-4">
+                Social robots are autonomous or semi-autonomous robots that are designed to <span style="color:coral; font-weight:500">interact with humans in a social way</span>. They are equipped with sensors, cameras, and other hardware that enable them to <span style="color:coral; font-weight:500">perceive and respond to human behaviors and social cues</span>. Social robots can engage in a variety of social interactions such as conversation, emotional expression, and physical gestures, and they are often designed to provide assistance or companionship to humans in various settings such as homes, hospitals, and schools.
+            </p> 
+             
+                 </div> <img src="Picture%203.png">
+           </div></div></div>
+      
+      
+    
+   
+       <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11">
+              <h3 class="text-center-h1 font-secondary mb-3">what we aim to do!</h3> 
+            <p class="text-body-1 mb-4">
+                •	Introduce social robots & their <span style="color:coral; font-weight:500">impacts</span> in various contexts<br>
+                •	Highlight <span style="color:coral; font-weight:500">innovations</span> in social robot technology<br>
+                •	Provide a <span style="color:coral; font-weight:500">one-stop platform</span> for researchers and consumers to get an overview of social robots (still a work-in-progress!)
+            </p> 
+                 </div><img src="Picture%204.png">
+           </div></div>
+      
+      
+      <div class="wrapper-top">
+       <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11">
+              <h3 class="text-center-h1 font-secondary mb-3">section 1/3: meet the social robots</h3> 
+               <p class="text-body-1 mb-4">Discover an array of social robots through an interactive gallery, featuring clickable images and short descriptions. Filter robots by categories and delve deeper into each robot's features, capabilities, and applications.</p>
+                 </div>
+            <div style="padding: 3vh 0;"> <img src="asimo.jpeg"  width="800px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4">Developed by Honda, <span style="color:coral; font-weight:500">ASIMO</span> is a humanoid robot designed to assist and interact with humans. With its advanced bipedal locomotion, ASIMO can walk, run, and navigate stairs, making it ideal for various applications, including elderly care and disaster relief.</p></div>
+              <div style="padding: 3vh 0;"> <img src="nao.jpeg"  width="800px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4">Developed by SoftBank Robotics, <span style="color:coral; font-weight:500">NAO</span> is a versatile humanoid robot primarily used in education, research, and healthcare settings. Its advanced AI, natural language processing, and expressive gestures make it a valuable tool for teaching, therapy, and communication.</p></div>
+              <div style="padding: 3vh 0;"> <img src="aibo.jpeg"  width="800px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4">Developed by Sony, <span style="color:coral; font-weight:500">AIBO</span>  is a robotic dog designed to interact with humans in a social manner. Equipped with advanced sensors and cameras, AIBO can perceive and respond to human behavior and social cues. It is a highly advanced robot with sophisticated movements and behaviors, making it ideal for entertainment and companionship purposes.</p></div>
+             
+            <div class="col-lg-9 col-11" style="padding-top:5vh;">
+              <h3 class="text-center-h2 font-secondary mb-3">discover more robots on your own!</h3> 
+                
+                <p class="text-body-1 mb-4"><a href="https://www.sciencedirect.com/science/article/pii/S0921889022001117" target="_blank">Source</a> of robots used in all data visualisations</p>
+                 </div>
+              </div> 
+                   <div class="flourish-embed flourish-survey" data-src="visualisation/13521439"><script src="https://public.flourish.studio/resources/embed.js"></script></div><br><br>
+            </div></div>
+      
+      
+     
+       <div class="container py-5">
+        <div class="row justify-content-center">
+            
+            <div class="col-lg-9 col-11">
+              <h3 class="text-center-h1 font-secondary mb-3">section 2/3: deep dive into social robot features</h3> 
+              <p class="text-body-1 mb-4">After playing with the interactive dot chart above, you might be wondering: what do all those different terms mean? Embodiment? Modalities? Fret not, we'll be explaining those below!</p>
+            </div>
+            
+               <div style="padding: 3vh 0;"> <img src="users.png"  width="400px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4"><span style="color:coral; font-weight:500">Target User Group:</span> Social robots cater to diverse user groups, including children, the elderly, individuals with disabilities, and professionals in different industries, by addressing their specific needs and enhancing their lives.</p></div>
+              <div style="padding: 3vh 0;"> <img src="android.png"  width="400px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4"><span style="color:coral; font-weight:500">Application Scenarios:</span> Social robots are versatile and adaptable, as demonstrated by case studies and examples showcasing their use in various sectors such as healthcare, education, retail, hospitality, and home environments.</p></div>
+              <div style="padding: 3vh 0;"> <img src="autonomy.png"  width="800px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4"><span style="color:coral; font-weight:500">Levels of Autonomy:</span>  Autonomy in social robots varies from fully autonomous to remote-controlled systems, and is influenced by factors such as purpose, user group, and technological capabilities, with associated benefits and challenges impacting user experience and effectiveness.</p></div>
+            <div style="padding: 3vh 0;"> <img src="modalities.png"  width="800px" 
+     height="auto"/></div>
+            <div class="col-lg-9 col-11">
+                <p class="text-body-1 mb-4"><span style="color:coral; font-weight:500">Input & Output Modalities:</span>  Social robots use input modalities such as speech, touch, and gesture recognition to perceive and respond to human interactions, while output modalities such as speech synthesis, facial expressions, and body language allow them to communicate and interact with humans effectively.</p></div>
+            
+            
+          <div class="col-lg-9 col-11" style="padding-top: 10vh;">
+              <h3 class="text-center-h2 font-secondary mb-3">modalities breakdown</h3> 
+              <p class="text-body-1 mb-4">Click on different parts of the interactive chart to learn more about the different channels of input and output modalities.</p>
+                           
+      <div class="flourish-embed" data-src="story/1900439"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+              <br><br>
+                </div>
+         
+             </div>  </div>
+      
+     
+        <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11" style="padding-top: 10vh;">
+              <h3 class="text-center-h1 font-secondary mb-3">section 3/3: key aspects at a glance</h3> 
+              <p class="text-body-1 mb-4">Now that you've gotten a better understanding  of the details, here is a high level overview of the key features to consider when designing social robots. Filter robots by application categories and get an overview of the level of autonomy, embodiment and modalities that existing social robots possess!</p>
+            </div></div></div>
+          
+        <div class="row justify-content-center">
+         
+                <select id="dropdown">
+  <option value="div1">Education</option>
+  <option value="div2">Entertainment</option>
+  <option value="div3">Healthcare</option>
+<option value="div4">Research</option>
+  <option value="div5">Service</option>
+  <option value="div6">Telepresence</option>
+</select>
+          </div> 
+
+      
+        <div class="row justify-content-center">
+              <div class="col-lg-9 col-11">
+<div id="div1" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOvi_DXc&#x2F;view?embed">
+  </iframe>
+</div></div>
+                
+<div id="div2" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOmD4IFc&#x2F;view?embed">
+  </iframe>
+</div></div>
+                  
+<div id="div3" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOjkVHic&#x2F;view?embed">
+  </iframe>
+</div></div>
+                  
+<div id="div4" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOuXyB70&#x2F;view?embed">
+  </iframe>
+</div></div>
+                  
+<div id="div5" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOk8b9Lw&#x2F;view?embed">
+  </iframe>
+</div></div>
+<div id="div6" class="content"><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFhOriYuiw&#x2F;view?embed">
+  </iframe>
+</div></div>
+    </div>
+      </div>
+      
+
+      
+       <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 col-11" style="padding-top: 20vh;">
+              <h3 class="text-center-h2 font-secondary mb-3">robot database</h3> 
+              <p class="text-body-1 mb-4">Scroll horizontally to find out more about each robot!</p>
+            </div></div></div>
+      
+      
+               <div class="flourish-embed flourish-cards" data-src="visualisation/13533693"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      
+          <br><br><br> 
+      <div class="row justify-content-center">
+            <h3 class="text-h2 font-secondary mb-3">robot quiz!</h3>
+        </div>
+      <div class="flourish-embed flourish-quiz" data-src="visualisation/13546063"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+      
+      
+      
+
+      <div class="container">
+        <div class="row justify-content-center" style="padding-top: 10vh; padding-bottom: 3vh">
+          <div class="col-lg-9 col-11">
+            <p class="text-body-1 mb-4">
+             As social robots become more integrated into our lives, it is essential to develop frameworks and guidelines that ensure their safe, responsible, and inclusive use. The future of social robots is bright, and we can transform the way we live, work, learn, and interact by embracing the opportunities and addressing the challenges they present. We wish you all the best in your future explorations of the world of social robots and human-robot interaction.
             </p> 
 
             <hr class="line-divider my-5 py-lg-2" />
 
-            <p class="blockquote font-secondary ">
-              “Block quote example”
-            </p>
+           <h3 class="text-center-h1 font-secondary mb-3">
+              “If we can make the robots that people can interact with, work with, live with, and help us, then we can really make the world a better place.” - Hiroshi Ishiguro</h3>
+          
 
             <hr class="line-divider my-5 py-lg-2" />           
 
-            <p class="text-body-1 mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto obcaecati alias delectus, illo non nam ad, accusamus magnam <em>italics here</em> <a href="" target="_blank">random link here</a> ipsa accusantium ratione praesentium dolores nesciunt ab officia quisquam excepturi sunt?
-            </p>
-
-            <img src="https://picsum.photos/640/280" alt="placeholder" width=100% class="mb-5 py-2" />
-
-            <h3 class="text-h2 font-secondary mb-3">subtitle here</h3>
-
-            <p class="text-body-1 mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error dolor, quos aut repellendus quia porro temporibus magni unde, rerum quasi aperiam, eligendi ducimus aliquam fugiat quas autem labore id consectetur.
-            </p>         
+              <p class="text-body-1 mb-5">02.526 Interactive Data Visualization (2023) Final Assignment<br><em>Sharmayne Lim Zhiyu & Jiang Zhuoqun</em></p>
           </div>
         </div>
+      </div>   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="scroll">
+       <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
       </div>
+      
+    
+        <script>
+            const dropdown = document.getElementById('dropdown');
+const divs = document.getElementsByClassName('content');
+            const div1 = document.getElementById('div1'); 
+            div1.style.display = 'block';
 
-      <div class="container-fluid" id="root">
-        <div class="row justify-content-center" id="scrolly__section">
-          <div class="col-4 scrolly__content">
-            <div class="step" data-step="1">
-              <div class="text-block pa-2">
-                <p class="text-body-2">lorem 1</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis modi labore unde commodi, dolorem ut enim, necessitatibus odit facere et pariatur minus! Aliquam rem earum tempore accusamus corporis similique.</p>
-              </div>
-            </div>
-            <div class="step" data-step="2">
-              <div class="text-block pa-2">
-                <p class="text-body-2">lorem 2</p>
-                <p class="text-body-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis modi labore unde commodi, dolorem ut enim, necessitatibus odit facere et pariatur minus! Aliquam rem earum tempore accusamus corporis similique.</p>
-              </div>            
-            </div>
-            <div class="step" data-step="3">
-              <div class="text-block pa-2">
-                <p class="text-body-2">lorem 3</p>
-                <p class="text-body-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis modi labore unde commodi, dolorem ut enim, necessitatibus odit facere et pariatur minus! Aliquam rem earum tempore accusamus corporis similique.</p>
-              </div>            
-            </div>
-            <div class="step" data-step="4">
-              <div class="text-block pa-2">
-                <p class="text-body-2">lorem 4</p>
-                <p class="text-body-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis modi labore unde commodi, dolorem ut enim, necessitatibus odit facere et pariatur minus! Aliquam rem earum tempore accusamus corporis similique.</p>
-              </div>            
-            </div>
-          </div>
+dropdown.addEventListener('change', () => {
+  // Hide all the divs first
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].style.display = 'none';
+  }
 
-          <div class="col-6 scrolly__chart">
-            <iframe scrolling="no" src="https://flo.uri.sh/story/872914/embed#slide-0"></iframe>
-          </div>
-        </div>        
-      </div>
-    </div>
+  // Show the selected div
+  const selectedDiv = document.getElementById(dropdown.value);
+  selectedDiv.style.display = 'block';
+});
+            
+            function progressBarScroll() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
 
+window.onscroll = function () {
+  progressBarScroll();
+};
+      </script>
+
+<script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
@@ -267,74 +518,6 @@
     <script src="https://public.flourish.studio/resources/embed.js"></script>
     
 
-    <!-- This code from here on is derived from the side-by-side code example from the scrollama library which can be found here: https://github.com/russellgoldenberg/scrollama  -->
-    <!-- I tweaked the function for handleStepEnter to accomodate the Flourish story! -->
 
-    <script>
-      var scrolly = d3.select("#scrolly__section");
-      var chart = scrolly.select(".scrolly__chart");
-      var content = scrolly.select(".scrolly__content");
-      var step = content.selectAll(".step");
-    
-      // initialize the scrollama
-      var scroller = scrollama();
-    
-      // generic window resize listener event
-      function handleResize() {
-        // 1. update height of step elements
-        var stepH = Math.floor(window.innerHeight * 1);
-        step.style("height", stepH + "px");
-    
-        var figureHeight = window.innerHeight * 0.75;
-        var figureMarginTop = (window.innerHeight - figureHeight) / 2;
-    
-        chart
-          .style("height", figureHeight + "px")
-          .style("top", figureMarginTop + "px");
-    
-        // 3. tell scrollama to update new element dimensions
-        scroller.resize();
-      }
-    
-      // scrollama event handlers
-      function handleStepEnter(response) {
-        const textblock = step.select(".text-block");
-
-        // add color to current step only
-        textblock.classed("is-active", function(d, i) {
-          return i === response.index;
-        });
-    
-        // update graphic based on step
-        const linkHead = 'https://flo.uri.sh/story/872914/embed#slide-'
-        const slide = response.index
-
-        d3.select('.scrolly__chart iframe')
-          .attr('src', linkHead + slide);
-      }
-    
-      function setupStickyfill() {
-        d3.selectAll(".sticky").each(function() {
-          Stickyfill.add(this);
-        });
-      }
-    
-      function init() {
-        setupStickyfill();
-        handleResize();
-        scroller
-          .setup({
-            step: "#scrolly__section .scrolly__content .step",
-            offset: 0.7,
-            debug: true
-          })
-          .onStepEnter(handleStepEnter);
-    
-        // setup resize event
-        window.addEventListener("resize", handleResize);
-      }
-    
-      init();
-    </script>    
   </body>
 </html>
